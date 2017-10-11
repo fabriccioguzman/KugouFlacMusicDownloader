@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CCWin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace KugouFlacMusicDownloader
 {
-    public partial class Form1 : Form
+    public partial class MainForm : CCSkinMain
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
