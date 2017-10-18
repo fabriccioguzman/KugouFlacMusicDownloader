@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("KugouFlacMusicDownloader")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("微软中国")]
+[assembly: AssemblyCompany("Yhen")]
 [assembly: AssemblyProduct("KugouFlacMusicDownloader")]
-[assembly: AssemblyCopyright("Copyright © 微软中国 2017")]
+[assembly: AssemblyCopyright("Copyright © Yhen 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
