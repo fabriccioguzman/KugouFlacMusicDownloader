@@ -7,13 +7,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KugouFlacMusicDownloader
@@ -214,7 +209,7 @@ namespace KugouFlacMusicDownloader
         {
             bool taskInfo = ThunderWorkEngine.XL_QueryTaskInfoEx(a, downTaskInfo);
             this.lblDownloadProgress.Text = "下载进度：" + (int)(downTaskInfo.fPercent * 100) + "%";
-            this.lblDownloadProgress.Text += string.Format("，速度{0}", (downTaskInfo.nSpeed / 1024.0 / 1024.0 * lvSongList.CheckedItems.Count).ToString("F2") + "MB/s");     //nSpeed只能获取单个文件的下载速度，所以乘以文件数量近似计算出总速度
+            this.lblDownloadProgress.Text += string.Format("，速度{0}", (downTaskInfo.nSpeed / 1024.0 / 1024.0 * lvSongList.SelectedItems.Count).ToString("F2") + "MB/s");     //nSpeed只能获取单个文件的下载速度，所以乘以文件数量近似计算出总速度
 
             if (downTaskInfo.stat == ThunderWorkEngine.DOWN_TASK_STATUS.TSC_COMPLETE)
             {

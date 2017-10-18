@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace com.yhen.downloader.vo
+﻿namespace com.yhen.downloader.vo
 {
     /// <summary>
     /// 酷狗音乐实体

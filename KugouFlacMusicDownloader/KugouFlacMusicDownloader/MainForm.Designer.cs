@@ -36,15 +36,15 @@
             this.lblClose = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnlBottomBar = new CCWin.SkinControl.SkinPanel();
+            this.lblDownloadProgress = new CCWin.SkinControl.SkinLabel();
+            this.btnBrowser = new CCWin.SkinControl.SkinButton();
+            this.txtDownloadDirectory = new System.Windows.Forms.TextBox();
+            this.lblDownloadSetting = new CCWin.SkinControl.SkinLabel();
             this.txtSearchBig = new System.Windows.Forms.TextBox();
             this.picSearchBig = new System.Windows.Forms.PictureBox();
             this.rightClickMenus = new CCWin.SkinControl.SkinContextMenuStrip();
             this.menuDownload = new System.Windows.Forms.ToolStripMenuItem();
             this.downloadTimer = new System.Windows.Forms.Timer(this.components);
-            this.lblDownloadSetting = new CCWin.SkinControl.SkinLabel();
-            this.txtDownloadDirectory = new System.Windows.Forms.TextBox();
-            this.btnBrowser = new CCWin.SkinControl.SkinButton();
-            this.lblDownloadProgress = new CCWin.SkinControl.SkinLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.lblSmile = new CCWin.SkinControl.SkinLabel();
             this.pnlSearchResult = new CCWin.SkinControl.SkinPanel();
@@ -105,7 +105,7 @@
             // picSearch
             // 
             this.picSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.picSearch.BackgroundImage = global::KugouFlacMusicDownloader.Properties.Resources.icon_search_l;
+            this.picSearch.BackgroundImage = global::KugouFlacMusicDownloader.Properties.Resources.icon_search_l1;
             this.picSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSearch.ErrorImage = null;
@@ -176,6 +176,76 @@
             this.pnlBottomBar.Size = new System.Drawing.Size(1008, 129);
             this.pnlBottomBar.TabIndex = 2;
             // 
+            // lblDownloadProgress
+            // 
+            this.lblDownloadProgress.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
+            this.lblDownloadProgress.AutoSize = true;
+            this.lblDownloadProgress.BackColor = System.Drawing.Color.Transparent;
+            this.lblDownloadProgress.BorderColor = System.Drawing.Color.White;
+            this.lblDownloadProgress.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.lblDownloadProgress.ForeColor = System.Drawing.Color.White;
+            this.lblDownloadProgress.Location = new System.Drawing.Point(20, 101);
+            this.lblDownloadProgress.Name = "lblDownloadProgress";
+            this.lblDownloadProgress.Size = new System.Drawing.Size(56, 17);
+            this.lblDownloadProgress.TabIndex = 14;
+            this.lblDownloadProgress.Text = "准备就绪";
+            this.lblDownloadProgress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnBrowser
+            // 
+            this.btnBrowser.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrowser.BaseColor = System.Drawing.Color.Transparent;
+            this.btnBrowser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.btnBrowser.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnBrowser.DownBack = null;
+            this.btnBrowser.DownBaseColor = System.Drawing.Color.Transparent;
+            this.btnBrowser.FadeGlow = false;
+            this.btnBrowser.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnBrowser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowser.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.btnBrowser.ForeColor = System.Drawing.Color.White;
+            this.btnBrowser.GlowColor = System.Drawing.Color.Transparent;
+            this.btnBrowser.InheritColor = true;
+            this.btnBrowser.InnerBorderColor = System.Drawing.Color.Silver;
+            this.btnBrowser.IsDrawGlass = false;
+            this.btnBrowser.Location = new System.Drawing.Point(382, 47);
+            this.btnBrowser.MouseBack = null;
+            this.btnBrowser.MouseBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.btnBrowser.Name = "btnBrowser";
+            this.btnBrowser.NormlBack = null;
+            this.btnBrowser.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnBrowser.Size = new System.Drawing.Size(75, 33);
+            this.btnBrowser.TabIndex = 13;
+            this.btnBrowser.Text = "浏览";
+            this.btnBrowser.UseVisualStyleBackColor = false;
+            this.btnBrowser.Click += new System.EventHandler(this.btnBrowser_Click);
+            // 
+            // txtDownloadDirectory
+            // 
+            this.txtDownloadDirectory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.txtDownloadDirectory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDownloadDirectory.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.txtDownloadDirectory.ForeColor = System.Drawing.Color.White;
+            this.txtDownloadDirectory.Location = new System.Drawing.Point(50, 51);
+            this.txtDownloadDirectory.Name = "txtDownloadDirectory";
+            this.txtDownloadDirectory.Size = new System.Drawing.Size(320, 24);
+            this.txtDownloadDirectory.TabIndex = 12;
+            // 
+            // lblDownloadSetting
+            // 
+            this.lblDownloadSetting.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
+            this.lblDownloadSetting.AutoSize = true;
+            this.lblDownloadSetting.BackColor = System.Drawing.Color.Transparent;
+            this.lblDownloadSetting.BorderColor = System.Drawing.Color.White;
+            this.lblDownloadSetting.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.lblDownloadSetting.ForeColor = System.Drawing.Color.White;
+            this.lblDownloadSetting.Location = new System.Drawing.Point(15, 10);
+            this.lblDownloadSetting.Name = "lblDownloadSetting";
+            this.lblDownloadSetting.Size = new System.Drawing.Size(65, 20);
+            this.lblDownloadSetting.TabIndex = 11;
+            this.lblDownloadSetting.Text = "下载设置";
+            this.lblDownloadSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // txtSearchBig
             // 
             this.txtSearchBig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
@@ -191,7 +261,7 @@
             // picSearchBig
             // 
             this.picSearchBig.BackColor = System.Drawing.Color.Transparent;
-            this.picSearchBig.BackgroundImage = global::KugouFlacMusicDownloader.Properties.Resources.icon_search_l;
+            this.picSearchBig.BackgroundImage = global::KugouFlacMusicDownloader.Properties.Resources.icon_search_l1;
             this.picSearchBig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picSearchBig.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSearchBig.ErrorImage = null;
@@ -250,76 +320,6 @@
             // 
             this.downloadTimer.Interval = 500;
             this.downloadTimer.Tick += new System.EventHandler(this.downloadTimer_Tick);
-            // 
-            // lblDownloadSetting
-            // 
-            this.lblDownloadSetting.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
-            this.lblDownloadSetting.AutoSize = true;
-            this.lblDownloadSetting.BackColor = System.Drawing.Color.Transparent;
-            this.lblDownloadSetting.BorderColor = System.Drawing.Color.White;
-            this.lblDownloadSetting.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.lblDownloadSetting.ForeColor = System.Drawing.Color.White;
-            this.lblDownloadSetting.Location = new System.Drawing.Point(15, 10);
-            this.lblDownloadSetting.Name = "lblDownloadSetting";
-            this.lblDownloadSetting.Size = new System.Drawing.Size(65, 20);
-            this.lblDownloadSetting.TabIndex = 11;
-            this.lblDownloadSetting.Text = "下载设置";
-            this.lblDownloadSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtDownloadDirectory
-            // 
-            this.txtDownloadDirectory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.txtDownloadDirectory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDownloadDirectory.Font = new System.Drawing.Font("微软雅黑", 9.5F);
-            this.txtDownloadDirectory.ForeColor = System.Drawing.Color.White;
-            this.txtDownloadDirectory.Location = new System.Drawing.Point(50, 51);
-            this.txtDownloadDirectory.Name = "txtDownloadDirectory";
-            this.txtDownloadDirectory.Size = new System.Drawing.Size(320, 24);
-            this.txtDownloadDirectory.TabIndex = 12;
-            // 
-            // btnBrowser
-            // 
-            this.btnBrowser.BackColor = System.Drawing.Color.Transparent;
-            this.btnBrowser.BaseColor = System.Drawing.Color.Transparent;
-            this.btnBrowser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.btnBrowser.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnBrowser.DownBack = null;
-            this.btnBrowser.DownBaseColor = System.Drawing.Color.Transparent;
-            this.btnBrowser.FadeGlow = false;
-            this.btnBrowser.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnBrowser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowser.Font = new System.Drawing.Font("微软雅黑", 9.5F);
-            this.btnBrowser.ForeColor = System.Drawing.Color.White;
-            this.btnBrowser.GlowColor = System.Drawing.Color.Transparent;
-            this.btnBrowser.InheritColor = true;
-            this.btnBrowser.InnerBorderColor = System.Drawing.Color.Silver;
-            this.btnBrowser.IsDrawGlass = false;
-            this.btnBrowser.Location = new System.Drawing.Point(382, 47);
-            this.btnBrowser.MouseBack = null;
-            this.btnBrowser.MouseBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.btnBrowser.Name = "btnBrowser";
-            this.btnBrowser.NormlBack = null;
-            this.btnBrowser.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnBrowser.Size = new System.Drawing.Size(75, 33);
-            this.btnBrowser.TabIndex = 13;
-            this.btnBrowser.Text = "浏览";
-            this.btnBrowser.UseVisualStyleBackColor = false;
-            this.btnBrowser.Click += new System.EventHandler(this.btnBrowser_Click);
-            // 
-            // lblDownloadProgress
-            // 
-            this.lblDownloadProgress.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
-            this.lblDownloadProgress.AutoSize = true;
-            this.lblDownloadProgress.BackColor = System.Drawing.Color.Transparent;
-            this.lblDownloadProgress.BorderColor = System.Drawing.Color.White;
-            this.lblDownloadProgress.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.lblDownloadProgress.ForeColor = System.Drawing.Color.White;
-            this.lblDownloadProgress.Location = new System.Drawing.Point(20, 101);
-            this.lblDownloadProgress.Name = "lblDownloadProgress";
-            this.lblDownloadProgress.Size = new System.Drawing.Size(56, 17);
-            this.lblDownloadProgress.TabIndex = 14;
-            this.lblDownloadProgress.Text = "准备就绪";
-            this.lblDownloadProgress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // toolTip
             // 
@@ -417,7 +417,7 @@
             this.lblSongName.Size = new System.Drawing.Size(84, 17);
             this.lblSongName.TabIndex = 11;
             this.lblSongName.Text = "“ 歌曲名称“";
-            this.lblSongName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSongName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // skinLabel1
             // 

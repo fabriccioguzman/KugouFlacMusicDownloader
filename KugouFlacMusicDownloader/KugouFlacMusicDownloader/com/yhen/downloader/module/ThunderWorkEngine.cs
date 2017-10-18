@@ -8,59 +8,59 @@ namespace com.yhen.downloader.module
     /// </summary>
     public static class ThunderWorkEngine
     {
-        [DllImport("Resources/plugins/xldl.dll", CharSet = CharSet.Unicode)]
+        [DllImport("xldl.dll", CharSet = CharSet.Unicode)]
         public static extern bool XL_Init();
 
-        [DllImport("Resources/plugins/xldl.dll", CharSet = CharSet.Unicode)]
+        [DllImport("xldl.dll", CharSet = CharSet.Unicode)]
         public static extern bool XL_UnInit();
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr XL_CreateTask([In()]DownTaskParam stParam);
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool XL_StartTask(IntPtr hTask);
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool XL_StopTask(IntPtr hTask);
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern object XL_SetSpeedLimit(Int32 nKBps);
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern int XL_CreateTaskByThunder(string pszUrl, string pszFileName, string pszReferUrl, string pszCharSet, string pszCookie);
        
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern object XL_SetUploadSpeedLimit(Int32 nTcpKBps, Int32 nOtherKBps);
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern object XL_SetProxy(DOWN_PROXY_INFO stProxyInfo);
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern object XL_DelTempFile(DownTaskParam stParam);
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool XL_DeleteTask(IntPtr hTask);
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool XL_GetBtDataFileList(string szFilePath, string szSeedFileFullPath);
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool XL_SetUserAgent(string pszUserAgent);
 
-        [DllImport("Resources/plugins/xldl.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("xldl.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool XL_GetFileSizeWithUrl(string lpURL, Int64 iFileSize);
 
-        [DllImportAttribute("Resources/plugins/xldl.dll", EntryPoint = "XL_QueryTaskInfoEx", CallingConvention = CallingConvention.Cdecl)]
+        [DllImportAttribute("xldl.dll", EntryPoint = "XL_QueryTaskInfoEx", CallingConvention = CallingConvention.Cdecl)]
         [return: MarshalAsAttribute(UnmanagedType.Bool)]
         public static extern bool XL_QueryTaskInfoEx(IntPtr hTask, [Out()]DownTaskInfo stTaskInfo);
 
-        [DllImportAttribute("Resources/plugins/xldl.dll", EntryPoint = "XL_QueryTaskInfoEx", CallingConvention = CallingConvention.Cdecl)]
+        [DllImportAttribute("xldl.dll", EntryPoint = "XL_QueryTaskInfoEx", CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr XL_CreateBTTask(DownBTTaskParam stParam);
 
-        [DllImportAttribute("Resources/plugins/xldl.dll", EntryPoint = "XL_QueryTaskInfoEx", CallingConvention = CallingConvention.Cdecl)]
+        [DllImportAttribute("xldl.dll", EntryPoint = "XL_QueryTaskInfoEx", CallingConvention = CallingConvention.Cdecl)]
         public static extern long XL_QueryBTFileInfo(IntPtr hTask, UIntPtr dwFileIndex, ulong ullFileSize, ulong ullCompleteSize, UIntPtr dwStatus);
 
-        [DllImportAttribute("Resources/plugins/xldl.dll", EntryPoint = "XL_QueryTaskInfoEx", CallingConvention = CallingConvention.Cdecl)]
+        [DllImportAttribute("xldl.dll", EntryPoint = "XL_QueryTaskInfoEx", CallingConvention = CallingConvention.Cdecl)]
         public static extern long XL_QueryBTFileInfo(IntPtr hTask, BTTaskInfo pTaskInfo);
 
 
