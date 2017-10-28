@@ -60,6 +60,8 @@
             this.songBitRate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.songDuration = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.songSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.progBig = new CCWin.SkinControl.SkinProgressIndicator();
+            this.progSmall = new CCWin.SkinControl.SkinProgressIndicator();
             this.pnlHeadBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.pnlBottomBar.SuspendLayout();
@@ -71,6 +73,7 @@
             // pnlHeadBar
             // 
             this.pnlHeadBar.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHeadBar.Controls.Add(this.progSmall);
             this.pnlHeadBar.Controls.Add(this.skinLabel2);
             this.pnlHeadBar.Controls.Add(this.picSearch);
             this.pnlHeadBar.Controls.Add(this.lblMinimize);
@@ -159,6 +162,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(220, 23);
             this.txtSearch.TabIndex = 0;
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // pnlBottomBar
             // 
@@ -257,6 +261,7 @@
             this.txtSearchBig.Size = new System.Drawing.Size(320, 39);
             this.txtSearchBig.TabIndex = 4;
             this.toolTip.SetToolTip(this.txtSearchBig, "输入以搜索歌曲、歌手");
+            this.txtSearchBig.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchBig_KeyPress);
             // 
             // picSearchBig
             // 
@@ -344,6 +349,7 @@
             // pnlSearchResult
             // 
             this.pnlSearchResult.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSearchResult.Controls.Add(this.progBig);
             this.pnlSearchResult.Controls.Add(this.lblSongsCount);
             this.pnlSearchResult.Controls.Add(this.skinLabel4);
             this.pnlSearchResult.Controls.Add(this.skinLabel3);
@@ -463,6 +469,7 @@
             this.lvSongList.TabIndex = 9;
             this.lvSongList.UseCompatibleStateImageBehavior = false;
             this.lvSongList.View = System.Windows.Forms.View.Details;
+            this.lvSongList.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lvSongList_ColumnClick);
             // 
             // songName
             // 
@@ -472,7 +479,7 @@
             // songSinger
             // 
             this.songSinger.Text = "歌手";
-            this.songSinger.Width = 250;
+            this.songSinger.Width = 230;
             // 
             // songFormat
             // 
@@ -493,6 +500,37 @@
             // 
             this.songSize.Text = "文件大小";
             this.songSize.Width = 100;
+            // 
+            // progBig
+            // 
+            this.progBig.AutoStart = true;
+            this.progBig.BackColor = System.Drawing.Color.Transparent;
+            this.progBig.CircleColor = System.Drawing.Color.White;
+            this.progBig.CircleSize = 0.85F;
+            this.progBig.ForeColor = System.Drawing.Color.White;
+            this.progBig.Location = new System.Drawing.Point(454, 186);
+            this.progBig.Name = "progBig";
+            this.progBig.NumberOfVisibleCircles = 7;
+            this.progBig.Percentage = 0F;
+            this.progBig.ShowPercentage = true;
+            this.progBig.ShowText = true;
+            this.progBig.Size = new System.Drawing.Size(101, 101);
+            this.progBig.TabIndex = 16;
+            this.progBig.Text = "加载中";
+            this.progBig.TextDisplay = ((CCWin.SkinControl.TextDisplayModes)((CCWin.SkinControl.TextDisplayModes.Percentage | CCWin.SkinControl.TextDisplayModes.Text)));
+            // 
+            // progSmall
+            // 
+            this.progSmall.BackColor = System.Drawing.Color.Transparent;
+            this.progSmall.CircleColor = System.Drawing.Color.White;
+            this.progSmall.CircleSize = 0.85F;
+            this.progSmall.ForeColor = System.Drawing.Color.White;
+            this.progSmall.Location = new System.Drawing.Point(436, 13);
+            this.progSmall.Name = "progSmall";
+            this.progSmall.NumberOfVisibleCircles = 7;
+            this.progSmall.Percentage = 0F;
+            this.progSmall.Size = new System.Drawing.Size(24, 24);
+            this.progSmall.TabIndex = 17;
             // 
             // MainForm
             // 
@@ -570,5 +608,7 @@
         private System.Windows.Forms.ColumnHeader songBitRate;
         private System.Windows.Forms.ColumnHeader songDuration;
         private System.Windows.Forms.ColumnHeader songSize;
+        private CCWin.SkinControl.SkinProgressIndicator progBig;
+        private CCWin.SkinControl.SkinProgressIndicator progSmall;
     }
 }
